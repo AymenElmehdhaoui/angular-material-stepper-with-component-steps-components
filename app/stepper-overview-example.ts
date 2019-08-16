@@ -9,7 +9,7 @@ import {MatStepper} from '@angular/material';
 })
 export class StepperOverviewExample {
   @ViewChild('stepper') stepper: MatStepper;
-
+  isStepTwoOptionnal = false;
   isLinear = true;
   stepOne = this._formBuilder.group({});
   stepTwo = this._formBuilder.group({});
@@ -41,5 +41,9 @@ export class StepperOverviewExample {
   move(index: number) {
     this.stepper.selectedIndex = index;
     event.stopPropagation();
+  }
+
+  setOptionalStepTwo() {
+    this.isStepTwoOptionnal = true;
   }
 }

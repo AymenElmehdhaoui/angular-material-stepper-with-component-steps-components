@@ -2,8 +2,8 @@
   <mat-step [stepControl]="stepOne">
     <app-step-one (onFormChange)="formChangeStepOne($event)"></app-step-one>
   </mat-step>
-  <mat-step [stepControl]="stepTwo">
-    <app-step-two (onFormChange)="formChangeStepTwo($event)">></app-step-two>
+  <mat-step [stepControl]="stepTwo" [optional]="isStepTwoOptionnal">
+    <app-step-two (onFormChange)="formChangeStepTwo($event)"></app-step-two>
   </mat-step>
   <mat-step>
     <form [formGroup]="stepThree">
@@ -22,6 +22,7 @@
     <button mat-raised-button color="accent" (click)="move(0)">1st</button>
     <button mat-raised-button color="accent" (click)="move(1)">2nd</button>
     <button mat-raised-button color="accent" (click)="move(2)">3rd</button>
+    <button mat-raised-button color="accent" (click)="setOptionalStepTwo()">Make Step 2 Optioal</button>
 </div>
 
 {{ data | json}}
