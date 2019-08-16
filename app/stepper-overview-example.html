@@ -1,13 +1,12 @@
 <mat-vertical-stepper [linear]="isLinear" #stepper>
-  <mat-step [stepControl]="stepOne">
+  <mat-step [stepControl]="stepOne" label="Step 1">
     <app-step-one (onFormChange)="formChangeStepOne($event)"></app-step-one>
   </mat-step>
-  <mat-step [stepControl]="stepTwo" [optional]="isStepTwoOptionnal">
+  <mat-step [stepControl]="stepTwo" [optional]="isStepTwoOptionnal" label="Step 2">
     <app-step-two (onFormChange)="formChangeStepTwo($event)"></app-step-two>
   </mat-step>
-  <mat-step>
+  <mat-step label="Step 3">
     <form [formGroup]="stepThree">
-      <ng-template matStepLabel>Fill out your description</ng-template>
       <mat-form-field>
         <input matInput placeholder="Description" formControlName="description">
       </mat-form-field>
