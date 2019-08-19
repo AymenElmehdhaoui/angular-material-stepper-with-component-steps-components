@@ -14,6 +14,7 @@ export class StepperOverviewExample {
   stepOne = this._formBuilder.group({});
   stepTwo = this._formBuilder.group({});
   stepThree = this._formBuilder.group({});
+  dataTwo = {address: 'bla bla'};
   data: {stepOne: any, stepTwo: any, stepThree: any} = {stepOne: {}, stepTwo: {}, stepThree: {}};
   constructor(
     private _formBuilder: FormBuilder

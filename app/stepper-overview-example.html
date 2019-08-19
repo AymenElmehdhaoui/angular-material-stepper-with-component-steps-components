@@ -3,7 +3,7 @@
     <app-step-one (onFormChange)="formChangeStepOne($event)"></app-step-one>
   </mat-step>
   <mat-step [stepControl]="stepTwo" [optional]="isStepTwoOptionnal" label="Step 2">
-    <app-step-two (onFormChange)="formChangeStepTwo($event)"></app-step-two>
+    <app-step-two (onFormChange)="formChangeStepTwo($event)" [data]="dataTwo" ></app-step-two>
   </mat-step>
   <mat-step label="Step 3">
     <form [formGroup]="stepThree">
